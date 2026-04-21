@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "ghl-wkfl-mcp": {
+      "command": "ghl-wkfl-mcp",
+      "env": {
+        "GHL_MCP_LICENSE_KEY": "${user_config.license_key}"
+      }
+    }
+  }
+}

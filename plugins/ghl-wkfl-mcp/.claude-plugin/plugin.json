@@ -1,0 +1,13 @@
+{
+  "name": "ghl-wkfl-mcp",
+  "version": "0.3.0-rc.2",
+  "description": "GoHighLevel workflow automation via Chrome DevTools Protocol. Install the `ghl-wkfl-mcp` binary first (see https://github.com/ampware-io/ghl-workflow-mcp#install).",
+  "homepage": "https://github.com/ampware-io/ghl-workflow-mcp",
+  "author": "ampware-io",
+  "userConfig": {
+    "license_key": {
+      "description": "Optional paid license JWT. Leave blank for free read-only tools (list workflows, audit, folders). Paste your license key to unlock workflow mutations (create/update/delete/publish/clone). Get a license: https://ampware.io/ghl-wkfl-mcp/buy",
+      "sensitive": true
+    }
+  }
+}

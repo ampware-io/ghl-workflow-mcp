@@ -1,0 +1,16 @@
+{
+  "name": "ghl-workflow-mcp",
+  "owner": {
+    "name": "ampware-io"
+  },
+  "metadata": {
+    "description": "GoHighLevel workflow management MCP server"
+  },
+  "plugins": [
+    {
+      "name": "ghl-wkfl-mcp",
+      "description": "GoHighLevel workflow automation via Chrome DevTools Protocol",
+      "source": "./plugins/ghl-wkfl-mcp"
+    }
+  ]
+}
