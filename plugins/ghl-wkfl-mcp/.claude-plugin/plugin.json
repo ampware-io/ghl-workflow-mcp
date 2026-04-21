@@ -1,6 +1,6 @@
 {
   "name": "ghl-wkfl-mcp",
-  "version": "0.3.0-rc.3",
+  "version": "2.0.0-beta.1",
   "description": "GoHighLevel workflow automation via Chrome DevTools Protocol. Install the `ghl-wkfl-mcp` binary first (see https://github.com/ampware-io/ghl-workflow-mcp#install).",
   "homepage": "https://github.com/ampware-io/ghl-workflow-mcp",
   "author": {
