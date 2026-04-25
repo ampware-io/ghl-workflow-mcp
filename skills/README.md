@@ -2,7 +2,7 @@
 
 > Skills that teach Claude (Desktop, Code, Cursor) how to build, edit, explain, and audit GoHighLevel workflows. These files are consumed by the [GHL Workflow MCP server](..) — install the MCP first, then pick an install path below for the skills.
 
-Version: `v2.0.0-beta.1`
+Latest version + downloads: **https://ampware.io/ghl-wkfl-mcp/install**
 
 ## The five skills
 

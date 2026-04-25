@@ -1,5 +1,6 @@
 ---
 name: ghl-plan-workflow
+version: 1.0.0
 description: Use this skill when the user describes a business process and wants it planned as a GHL workflow — no creation yet, just a numbered plain-English plan with real triggers and actions.
 ---
 

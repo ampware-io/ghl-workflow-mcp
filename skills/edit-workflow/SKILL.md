@@ -1,5 +1,6 @@
 ---
 name: ghl-edit-workflow
+version: 1.0.0
 description: Use this skill when the user wants to modify an existing GoHighLevel workflow. Explains the current workflow in plain English, confirms changes, then applies via update_workflow.
 ---
 
@@ -79,7 +80,7 @@ After the update, present:
 
 - A plain-English summary of what changed
 - A direct link:
-  `https://app.gohighlevel.com/v2/location/{locationId}/automation/workflows/{workflowId}`
+  `https://app.gohighlevel.com/location/{locationId}/automation/workflows/{workflowId}`
   Replace `{locationId}` and `{workflowId}` with the actual values.
 - Any `entityWarnings` from the response, with recommended corrections.
 

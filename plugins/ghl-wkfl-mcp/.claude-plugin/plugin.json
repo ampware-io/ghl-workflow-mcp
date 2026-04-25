@@ -1,7 +1,7 @@
 {
   "name": "ghl-wkfl-mcp",
-  "version": "2.0.0-beta.1",
-  "description": "GoHighLevel workflow automation via Chrome DevTools Protocol. Install the `ghl-wkfl-mcp` binary first (see https://github.com/ampware-io/ghl-workflow-mcp#install).",
+  "version": "2.0.0-beta.5",
+  "description": "Manage GoHighLevel workflows from Claude — read, create, audit, edit, organise, and clone — using your existing Chrome session. No GHL API key required. Get the binary: https://ampware.io/ghl-wkfl-mcp/install",
   "homepage": "https://github.com/ampware-io/ghl-workflow-mcp",
   "author": {
     "name": "ampware-io",

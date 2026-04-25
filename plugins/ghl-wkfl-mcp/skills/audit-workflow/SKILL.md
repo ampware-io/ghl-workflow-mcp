@@ -1,5 +1,6 @@
 ---
 name: ghl-audit-workflow
+version: 1.0.0
 description: Use this skill when the user wants to audit a GoHighLevel workflow for broken entity references (invalid pipeline/stage/user/custom-field/custom-value IDs) before publishing or editing.
 ---
 

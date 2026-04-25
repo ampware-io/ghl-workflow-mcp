@@ -1,5 +1,6 @@
 ---
 name: ghl-create-workflow
+version: 1.0.0
 description: Use this skill when the user wants to create a new GoHighLevel workflow from scratch or based on an existing template. Covers plan-first conversation, entity validation, and clone-then-modify.
 ---
 
@@ -65,7 +66,7 @@ After creation, present:
 
 - A plain-English summary of what was built (trigger, steps in order, wait timings)
 - A direct link in exactly this format:
-  `https://app.gohighlevel.com/v2/location/{locationId}/automation/workflows/{workflowId}`
+  `https://app.gohighlevel.com/location/{locationId}/automation/workflows/{workflowId}`
   Replace `{locationId}` and `{workflowId}` with the actual values from the API response.
 - Any `entityWarnings` from the create response, with suggested fixes.
 

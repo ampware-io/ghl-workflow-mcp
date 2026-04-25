@@ -1,5 +1,6 @@
 ---
 name: ghl-explain-workflow
+version: 1.0.0
 description: Use this skill when the user wants a plain-English explanation of what a GoHighLevel workflow does — triggers, steps, wait timings, branching, and settings.
 ---
 
