@@ -77,6 +77,19 @@ Claude Desktop supports importing `.skill` archives via its Skills panel. Downlo
 
 Desktop's Skills UI rejects multi-skill archives — that's why we ship five separate single-skill archives instead of one aggregate. Each archive holds a single SKILL.md; drag each one in turn.
 
+## Multi-workflow tasks: use agents
+
+For tasks spanning multiple workflows — auditing several workflows, proposing consolidations, dependency-impact analysis before editing — invoke one of the 4 Claude Code agents shipped alongside these skills:
+
+- `orchestrator` — multi-workflow dispatcher; spawns `auditor` / `planner` / `builder` as subagents
+- `planner` — proposes plans across one or more workflows, writes plans to disk
+- `builder` — executes approved mutations (paid tools); destructive ops require two confirmations
+- `auditor` — dependency-impact + consolidation analysis, read-only
+
+Skills handle ONE workflow at a time. Agents handle the portfolio.
+
+See the [main README → Claude Code agents](..#claude-code-agents) for the full table.
+
 ## Learn more
 
 - [Main README](..#readme) — MCP server install, Free vs Paid, feature matrix

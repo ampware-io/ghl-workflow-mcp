@@ -6,6 +6,8 @@ description: Use this skill when the user describes a business process and wants
 
 # Plan a GoHighLevel Workflow
 
+For tasks spanning multiple workflows (audit several, propose consolidations, edit-with-blast-radius), invoke the `orchestrator` agent instead.
+
 Use this skill when the user describes a business process and wants it planned — not built yet. The output is a numbered plain-English plan that maps the process to real GHL triggers and actions, with correctly-calculated wait timings.
 
 ## Launch gate — always ask before opening Chrome

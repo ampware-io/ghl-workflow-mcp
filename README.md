@@ -46,7 +46,30 @@ Then ask Claude to call `test_connection`. If Chrome isn't running with remote d
 ## What's included
 
 - **MCP server** — 27 tools (21 free, 6 paid)
-- **Workflow skills** — short markdown files Claude uses to handle GHL tasks. Auto-extracted to `~/.claude/skills/ghl-wkfl/` by the plugin. Current skills: `ghl-audit-workflow`, `ghl-create-workflow`, `ghl-edit-workflow`, `ghl-explain-workflow`, `ghl-plan-workflow`. Claude picks the right skill based on what you ask.
+- **Workflow skills** — short markdown files Claude uses to handle single-workflow GHL tasks. Auto-extracted to `~/.claude/skills/ghl-wkfl/` by the plugin. Current skills: `ghl-audit-workflow`, `ghl-create-workflow`, `ghl-edit-workflow`, `ghl-explain-workflow`, `ghl-plan-workflow`. Claude picks the right skill based on what you ask.
+- **Claude Code agents** — 4 portfolio-aware subagents (`orchestrator`, `planner`, `builder`, `auditor`) for cross-workflow reasoning: dependency-impact analysis before edits, consolidation suggestions, multi-skill orchestration. Auto-discovered by Claude Code from the plugin's `agents/` directory; invoke via `Task` or by name. See [Claude Code agents](#claude-code-agents) below.
+
+## Claude Code agents
+
+Claude Code's plugin auto-discovers 4 subagents from the plugin's `agents/` directory. Each agent wraps the existing skills with a portfolio-wide perspective the single-workflow skills cannot provide.
+
+| Agent | What it does | Tool access |
+|-------|--------------|-------------|
+| `orchestrator` | Drives multi-workflow sequences. Dispatches `auditor`, `planner`, `builder` via `Task`. Handles folder reshape (create / delete / rename folders, move workflows). Asks for explicit user approval via `AskUserQuestion` before any write. | Read-side tools, folder CRUD, `Task`. NOT workflow-content mutation — delegates to `builder`. |
+| `planner` | Read-only proposer. Plans changes across one or more workflows and writes the plan to disk as a markdown file (default `~/ghl-plans/`). Never executes writes. | Read-side tools + `Write`. NO mutation tools. |
+| `builder` | Authorised mutation surface. Executes approved plans (create / update / patch / clone / publish / delete workflows; create / delete / rename folders; move workflows). **Destructive operations require TWO confirmations** — first asks intent, second asks the user to type the workflow/folder name back to confirm. | Full read + write surface (paid tools require an active license). |
+| `auditor` | Read-heavy analyst. Surfaces dependency-impact (which workflows share tags / triggers / pipelines / opportunities with this one?) and consolidation suggestions (which workflows look duplicative?). Persists audit reports to disk. May reshape folders for organisational follow-through, but never mutates workflow content. | Read-side tools + folder CRUD + `Write`. |
+
+**How to invoke an agent:**
+
+- Ask Claude in natural language. Examples:
+  - _"Use the auditor to find every workflow that depends on the `lead-warm` tag."_
+  - _"Have the planner draft a consolidation plan for my onboarding workflows."_
+  - _"Orchestrator: clean up the Lead Capture folder — audit, propose fixes, ask before applying."_
+- The orchestrator can spawn the other three agents itself via Claude Code's `Task` tool. You don't have to chain calls manually.
+- Every approval gate uses `AskUserQuestion` (a structured option picker) — no inline yes/no prose questions.
+
+**License gate:** the `builder` agent's mutation tools are PAID and require an active license JWT. The `orchestrator`, `planner`, and `auditor` agents only use free tools (reads + folder CRUD), so they work on the free tier.
 
 ## Free vs Paid
 

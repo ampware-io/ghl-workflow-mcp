@@ -6,6 +6,8 @@ description: Use this skill when the user wants to audit a GoHighLevel workflow 
 
 # Audit a GoHighLevel Workflow for Broken Entity References
 
+For tasks spanning multiple workflows (audit several, propose consolidations, edit-with-blast-radius), invoke the `orchestrator` agent instead.
+
 Use this skill when the user wants to validate an existing workflow — checking that every ID it references (pipelines, stages, users, custom fields, custom values, tags) still exists in the current GHL location. Audit is read-only; it never changes the workflow.
 
 ## Launch gate — always ask before opening Chrome

@@ -6,6 +6,8 @@ description: Use this skill when the user wants a plain-English explanation of w
 
 # Explain a GoHighLevel Workflow in Plain English
 
+For tasks spanning multiple workflows (audit several, propose consolidations, edit-with-blast-radius), invoke the `orchestrator` agent instead.
+
 Use this skill when the user wants to understand what an existing GHL workflow does. The output is a plain-English explanation — no JSON, no internal ID dumps, no assumptions.
 
 ## Launch gate — always ask before opening Chrome
